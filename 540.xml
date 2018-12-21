@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XML Spy v4.0.1 (http://www.xmlspy.com) by Otavio Silva (Webb) -->
+<!--payloadID } um identificador }nico do documento-->
+<cXML payloadID="2014120413410005@Webb" timestamp="2014/12/04 13:41:0005">
+	<Header>
+		<!--Remetente-->
+		<From>
+			<!-- dom}nio do login do remetente, ou seja, onde ele est} definido-->
+			<Credential domain="Webb">
+				<!--login do remetente-->
+				<Identity>
+					<Name xml:lang="pt-BR">CSN3027</Name>
+					<InternalID>60627221000116</InternalID>
+				</Identity>
+			</Credential>
+		</From>
+		<!--destinat}rio da mensagem-->
+		<To>
+			<!-- dom}nio do login do destinat}rio, ou seja, onde ele est} definido-->
+			<Credential domain="Webb">
+				<!--login do destinat}rio-->
+				<Identity>
+					<Name xml:lang="pt-BR">CS68270</Name>
+					<InternalID>33042730000104</InternalID>
+				</Identity>
+			</Credential>
+		</To>
+		<!-- identificador de quem est} enviando a mensagem-->
+		<Sender>
+			<Credential domain="Webb">
+				<Identity>
+					<Name xml:lang="pt-BR">Webb</Name>
+					<InternalID/>
+					<WebbHeader cnpj="33042730000104" isvSequence="46000000168" isvid="0640000" messageType="540" timestamp="2014/12/04 13:41:0006"/>
+					<Extrinsic name="POOrigin">0640000</Extrinsic>
+					<Extrinsic name="Solicitante"/>
+					<Extrinsic name="EmailSolicitante"/>
+					<Extrinsic name="Justificativa"/>
+					<Extrinsic name="isChange">false</Extrinsic>
+				</Identity>
+			</Credential>
+			<!-- agente que enviou a mensagem-->
+			<UserAgent>MessageProcessor</UserAgent>
+		</Sender>
+	</Header>
+	<Request>
+		<OrderRequest>
+			<!--Cabe}alho da PO
+                             orderID } o n}mero da PO no MP
+                             requisitionID } o n}mero da PO no ERP do remetente, caso o rementente n}o tenha enviado a PO de uma solu}}o integrada este atributo ser} o n}mero da requisi}}o no Ariba-->
+			<OrderRequestHeader orderDate="2014/12/04 13:41:0005" orderID="3465273-1" requisitionID="46000000168">
+				<!--Valor total da PO-->
+				<Total>
+					<Money currency="BRL">1845,00</Money>
+				</Total>
+				<!-- endere}o de entrega-->
+
+				<!-- endere}o de cobran}a-->
+
+				<!-- informa}}es de log}stica -->
+				<Shipping>
+					<!--Valor do frete-->
+					<Money currency="BRL">0.0</Money>
+					<Description xml:lang="pt-BR">N/A</Description>
+				</Shipping>
+				<!-- informa}}es de impostos de toda PO-->
+				<Tax>
+					<Money currency="BRL">0.0</Money>
+					<Description xml:lang="pt-BR">Imposto total da PO</Description>
+				</Tax>
+				<!-- pessoa de contato no comprador pode possuir informa}}es como endere}o, telefone, e-mail, etc.-->
+				<Contact>
+					<Name xml:lang="pt-BR">Andre Gratti</Name>
+					<Email/>
+				</Contact>
+				<Comments></Comments>
+				<Extrinsic name="NomePedido">
+					<Name xml:lang="pt-BR">Requisigco com termo de aceite</Name>
+				</Extrinsic>
+				<Extrinsic name="PaymentMethod">
+					<PaymentMethod>
+						<SupplierCredit>
+							<Prazo quantidade="0" unidade="dia"/>
+						</SupplierCredit>
+					</PaymentMethod>
+				</Extrinsic>
+				<Extrinsic name="PaymentMethodAux">
+					<Conteudo Codigo="P002">P002 - PAGTO. CONCENTRADO A 02 DIAS DA DATA DOCUMENTO</Conteudo>
+				</Extrinsic>
+				<Extrinsic name="ShippingType">
+					<ShippingType type="FOB"/>
+				</Extrinsic>
+				<Extrinsic name="InfoBuyer">
+					<Name xml:lang="pt-BR">Andre Gratti</Name>
+					<CNPJ>33042730000104</CNPJ>
+				</Extrinsic>
+				<Extrinsic name="RFQNumber">824088</Extrinsic>
+				<Extrinsic name="isSupplier">false</Extrinsic>
+				<Extrinsic name="atrComplementar">
+					<AtrComplementar codigo="CSN_INCOT" descricao="Condigco de Entrega (Incoterms)">
+						<Conteudo>CIF</Conteudo>
+					</AtrComplementar>
+					<AtrComplementar codigo="CSN_LOCAL" descricao="Local de Entrega">
+						<Conteudo>CTU</Conteudo>
+					</AtrComplementar>
+					<AtrComplementar codigo="CSN_TIPOPED" descricao="Tipo de Pedido SAP">
+						<Conteudo>WF</Conteudo>
+					</AtrComplementar>
+					<AtrComplementar codigo="CSN_GPOCOMPRAS" descricao="Grupo de Compradores">
+						<Conteudo>tst</Conteudo>
+					</AtrComplementar>
+					<AtrComplementar codigo="CSN_TIPOREQ" descricao="Tipo de Requisigco SAP">
+						<Conteudo>MN</Conteudo>
+					</AtrComplementar>
+				</Extrinsic>
+				<Extrinsic name="documentType">PADRAOCSN</Extrinsic>
+				<Extrinsic name="requestType">Order</Extrinsic>
+				<Extrinsic name="LastApproverLogin">CSERP2</Extrinsic>
+			</OrderRequestHeader>
+			<!-- a partir daqui conjunto de itens que fazem parte do pedido-->
+			<!-- lineNumber } a posi}}o do item na PO contada a partir de 1-->
+
+			<ItemOut lineNumber="8865318" quantity="4">
+				<!--c}digo do fornecedor para o item-->
+				<ItemID>
+					<SupplierPartID>N/A</SupplierPartID>
+				</ItemID>
+				<!--Detalhamento do item-->
+				<ItemDetail>
+					<UnitPrice>
+						<Money currency="BRL">123,00</Money>
+					</UnitPrice>
+					<Description xml:lang="pt-BR">ELEMENTO FILTRO VENTIL  595X595X 600MM</Description>
+					<UnitOfMeasure>EA</UnitOfMeasure>
+					<!--Categoria-->
+					<Classification domain="Webb">N/A</Classification>
+					<!--C}digo do fabricante para o item -->
+					<ManufacturerPartID>000000000001000011</ManufacturerPartID>
+					<!--Nome do fabricante-->
+					<ManufacturerName>Nco especificado</ManufacturerName>
+					<Extrinsic name="TaxaWebb">
+						<Money currency="BRL">0,00</Money>
+					</Extrinsic>
+					<Extrinsic name="BuyerCode">000000000001000011</Extrinsic>
+					<Extrinsic name="SeqLineNumber">1</Extrinsic>
+					<Extrinsic name="leadTime">5</Extrinsic>
+					<Extrinsic name="deliveryDate">30/07/2013</Extrinsic>
+					<Extrinsic name="OriginalLineKey">8865315</Extrinsic>
+					<Extrinsic name="OriginalRequisitionKey">3465272</Extrinsic>
+					<Extrinsic name="ERPOriginalRequisitionKey">TST201401128</Extrinsic>
+					<Extrinsic name="ERPOriginalRequisitionLineKey">00001</Extrinsic>
+					<Extrinsic name="NCM"></Extrinsic>
+					<Extrinsic name="NOP">S01</Extrinsic>
+					<Extrinsic name="ProductOrigin"></Extrinsic>
+					<Extrinsic name="RFQOriginalKey">7129101</Extrinsic>
+					<Extrinsic name="RFQResponseKey">7129104</Extrinsic>
+					<Extrinsic name="atrComplementar">
+						<AtrComplementar codigo="CSN_AMPARO" descricao="01. Amparo legal / Resolugco">
+							<Conteudo codigo=""></Conteudo>
+						</AtrComplementar>
+					</Extrinsic>
+					<Extrinsic name="ERPLineKey">00001</Extrinsic>
+					<Extrinsic name="SupplierIsvid">N/A</Extrinsic>
+					<Extrinsic name="SupplierExternalCode">0000010145</Extrinsic>
+					<Extrinsic name="InternalComments"></Extrinsic>
+					<Extrinsic name="BuyerGroupID">B02</Extrinsic>
+				</ItemDetail>
+				<!--Informa}}es sobre impostos espec}ficas do item-->
+				<Tax>
+					<!--Valor total dos impostos para o item-->
+					<Money currency="BRL">BRL 0,00000</Money>
+					<Description xml:lang="pt-BR">Descricao imposto 0</Description>
+				</Tax>
+				<Comments></Comments>
+				<ItemShipping>
+					<Address>32 - CSN Mogi das Cruzes</Address>
+					<AddressName>32 - CSN Mogi das Cruzes</AddressName>
+					<Street>Av. Inal, 190</Street>
+					<District>sem bairro</District>
+					<City>Mogi das Cruzes</City>
+					<State>SP</State>
+					<Country>BR</Country>
+					<ZipCode>08770040</ZipCode>
+				</ItemShipping>
+				<ItemBilling>
+					<Address>32 - CSN Mogi das Cruzes</Address>
+					<AddressName>32 - CSN Mogi das Cruzes</AddressName>
+					<Street>Av. Inal, 190</Street>
+					<District>sem bairro</District>
+					<City>Mogi das Cruzes</City>
+					<State>SP</State>
+					<Country>BR</Country>
+					<ZipCode>08770040</ZipCode>
+				</ItemBilling>
+			</ItemOut>
+			<ItemOut lineNumber="8865319" quantity="5">
+				<!--c}digo do fornecedor para o item-->
+				<ItemID>
+					<SupplierPartID>N/A</SupplierPartID>
+				</ItemID>
+				<!--Detalhamento do item-->
+				<ItemDetail>
+					<UnitPrice>
+						<Money currency="BRL">123,00</Money>
+					</UnitPrice>
+					<Description xml:lang="pt-BR">POLIA ABB 065177014</Description>
+					<UnitOfMeasure>EA</UnitOfMeasure>
+					<!--Categoria-->
+					<Classification domain="Webb">N/A</Classification>
+					<!--C}digo do fabricante para o item -->
+					<ManufacturerPartID>000000000001000015</ManufacturerPartID>
+					<!--Nome do fabricante-->
+					<ManufacturerName>Nco especificado</ManufacturerName>
+					<Extrinsic name="TaxaWebb">
+						<Money currency="BRL">0,00</Money>
+					</Extrinsic>
+					<Extrinsic name="BuyerCode">000000000001000015</Extrinsic>
+					<Extrinsic name="SeqLineNumber">2</Extrinsic>
+					<Extrinsic name="leadTime">5</Extrinsic>
+					<Extrinsic name="deliveryDate">30/07/2013</Extrinsic>
+					<Extrinsic name="OriginalLineKey">8865316</Extrinsic>
+					<Extrinsic name="OriginalRequisitionKey">3465272</Extrinsic>
+					<Extrinsic name="ERPOriginalRequisitionKey">TST201401128</Extrinsic>
+					<Extrinsic name="ERPOriginalRequisitionLineKey">00002</Extrinsic>
+					<Extrinsic name="NCM"></Extrinsic>
+					<Extrinsic name="NOP">S02</Extrinsic>
+					<Extrinsic name="ProductOrigin"></Extrinsic>
+					<Extrinsic name="RFQOriginalKey">7129102</Extrinsic>
+					<Extrinsic name="RFQResponseKey">7129105</Extrinsic>
+					<Extrinsic name="atrComplementar">
+						<AtrComplementar codigo="CSN_AMPARO" descricao="01. Amparo legal / Resolugco">
+							<Conteudo codigo=""></Conteudo>
+						</AtrComplementar>
+					</Extrinsic>
+					<Extrinsic name="ERPLineKey">00002</Extrinsic>
+					<Extrinsic name="SupplierIsvid">N/A</Extrinsic>
+					<Extrinsic name="SupplierExternalCode">0000010145</Extrinsic>
+					<Extrinsic name="InternalComments"></Extrinsic>
+					<Extrinsic name="BuyerGroupID">B02</Extrinsic>
+				</ItemDetail>
+				<!--Informa}}es sobre impostos espec}ficas do item-->
+				<Tax>
+					<!--Valor total dos impostos para o item-->
+					<Money currency="BRL">BRL 0,00000</Money>
+					<Description xml:lang="pt-BR">Descricao imposto 1</Description>
+				</Tax>
+				<Comments></Comments>
+				<ItemShipping>
+					<Address>32 - CSN Mogi das Cruzes</Address>
+					<AddressName>32 - CSN Mogi das Cruzes</AddressName>
+					<Street>Av. Inal, 190</Street>
+					<District>sem bairro</District>
+					<City>Mogi das Cruzes</City>
+					<State>SP</State>
+					<Country>BR</Country>
+					<ZipCode>08770040</ZipCode>
+				</ItemShipping>
+				<ItemBilling>
+					<Address>32 - CSN Mogi das Cruzes</Address>
+					<AddressName>32 - CSN Mogi das Cruzes</AddressName>
+					<Street>Av. Inal, 190</Street>
+					<District>sem bairro</District>
+					<City>Mogi das Cruzes</City>
+					<State>SP</State>
+					<Country>BR</Country>
+					<ZipCode>08770040</ZipCode>
+				</ItemBilling>
+			</ItemOut>
+			<ItemOut lineNumber="8865320" quantity="6">
+				<!--c}digo do fornecedor para o item-->
+				<ItemID>
+					<SupplierPartID>N/A</SupplierPartID>
+				</ItemID>
+				<!--Detalhamento do item-->
+				<ItemDetail>
+					<UnitPrice>
+						<Money currency="BRL">123,00</Money>
+					</UnitPrice>
+					<Description xml:lang="pt-BR">ELEMENTO FILTRO VENTIL  595X595X 600MM</Description>
+					<UnitOfMeasure>EA</UnitOfMeasure>
+					<!--Categoria-->
+					<Classification domain="Webb">N/A</Classification>
+					<!--C}digo do fabricante para o item -->
+					<ManufacturerPartID>000000000001000011</ManufacturerPartID>
+					<!--Nome do fabricante-->
+					<ManufacturerName>Nco especificado</ManufacturerName>
+					<Extrinsic name="TaxaWebb">
+						<Money currency="BRL">0,00</Money>
+					</Extrinsic>
+					<Extrinsic name="BuyerCode">000000000001000011</Extrinsic>
+					<Extrinsic name="SeqLineNumber">3</Extrinsic>
+					<Extrinsic name="leadTime">5</Extrinsic>
+					<Extrinsic name="deliveryDate">30/07/2013</Extrinsic>
+					<Extrinsic name="OriginalLineKey">8865317</Extrinsic>
+					<Extrinsic name="OriginalRequisitionKey">3465272</Extrinsic>
+					<Extrinsic name="ERPOriginalRequisitionKey">TST201401128</Extrinsic>
+					<Extrinsic name="ERPOriginalRequisitionLineKey">00003</Extrinsic>
+					<Extrinsic name="NCM"></Extrinsic>
+					<Extrinsic name="NOP">S01</Extrinsic>
+					<Extrinsic name="ProductOrigin"></Extrinsic>
+					<Extrinsic name="RFQOriginalKey">7129103</Extrinsic>
+					<Extrinsic name="RFQResponseKey">7129106</Extrinsic>
+					<Extrinsic name="atrComplementar">
+						<AtrComplementar codigo="CSN_AMPARO" descricao="01. Amparo legal / Resolugco">
+							<Conteudo codigo=""></Conteudo>
+						</AtrComplementar>
+					</Extrinsic>
+					<Extrinsic name="ERPLineKey">00003</Extrinsic>
+					<Extrinsic name="SupplierIsvid">N/A</Extrinsic>
+					<Extrinsic name="SupplierExternalCode">0000010145</Extrinsic>
+					<Extrinsic name="InternalComments"></Extrinsic>
+					<Extrinsic name="BuyerGroupID">B02</Extrinsic>
+				</ItemDetail>
+				<!--Informa}}es sobre impostos espec}ficas do item-->
+				<Tax>
+					<!--Valor total dos impostos para o item-->
+					<Money currency="BRL">BRL 0,00000</Money>
+					<Description xml:lang="pt-BR">Descricao imposto 2</Description>
+				</Tax>
+				<Comments></Comments>
+				<ItemShipping>
+					<Address>32 - CSN Mogi das Cruzes</Address>
+					<AddressName>32 - CSN Mogi das Cruzes</AddressName>
+					<Street>Av. Inal, 190</Street>
+					<District>sem bairro</District>
+					<City>Mogi das Cruzes</City>
+					<State>SP</State>
+					<Country>BR</Country>
+					<ZipCode>08770040</ZipCode>
+				</ItemShipping>
+				<ItemBilling>
+					<Address>32 - CSN Mogi das Cruzes</Address>
+					<AddressName>32 - CSN Mogi das Cruzes</AddressName>
+					<Street>Av. Inal, 190</Street>
+					<District>sem bairro</District>
+					<City>Mogi das Cruzes</City>
+					<State>SP</State>
+					<Country>BR</Country>
+					<ZipCode>08770040</ZipCode>
+				</ItemBilling>
+			</ItemOut>
+		</OrderRequest>
+	</Request>
+</cXML>
