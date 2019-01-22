@@ -1,0 +1,67 @@
+
+
+------15/01/2019 09:58:29
+can only concatenate str (not "float") to strTraceback (most recent call last):
+  File "C:\Users\ramon\Documents\ramon\UniFardas\webservice.py", line 17, in pedido
+    file_pedido = open('pedidos/'+pedido.Order_Id+'_'+ time.time()+'.xml', 'w')
+TypeError: can only concatenate str (not "float") to str
+
+
+------15/01/2019 10:02:54
+Pedido recebido 3465273-1
+
+------15/01/2019 10:02:54
+[Errno 2] No such file or directory: 'pedidos/3465273-1_1547557374.6971297.xml'Traceback (most recent call last):
+  File "C:\Users\ramon\Documents\ramon\UniFardas\webservice.py", line 17, in pedido
+    file_pedido = open('pedidos/'+pedido.Order_Id+'_'+ str(time.time())+'.xml', 'w')
+FileNotFoundError: [Errno 2] No such file or directory: 'pedidos/3465273-1_1547557374.6971297.xml'
+
+
+------15/01/2019 10:03:24
+Pedido recebido 3465273-1
+
+------15/01/2019 10:03:24
+[Errno 2] No such file or directory: 'pedidos/3465273-1_1547557404.0567331.xml'Traceback (most recent call last):
+  File "C:\Users\ramon\Documents\ramon\UniFardas\webservice.py", line 17, in pedido
+    file_pedido = open('pedidos/'+pedido.Order_Id+'_'+ str(time.time())+'.xml', 'w')
+FileNotFoundError: [Errno 2] No such file or directory: 'pedidos/3465273-1_1547557404.0567331.xml'
+
+
+------15/01/2019 10:04:23
+Pedido recebido 3465273-1
+
+------15/01/2019 10:04:23
+[Errno 2] No such file or directory: 'pedidos/3465273-1_1547557463.4684756.xml'Traceback (most recent call last):
+  File "C:\Users\ramon\Documents\ramon\UniFardas\webservice.py", line 17, in pedido
+    file_pedido = open('pedidos/'+pedido.Order_Id+'_'+ str(time.time())+'.xml', 'a+')
+FileNotFoundError: [Errno 2] No such file or directory: 'pedidos/3465273-1_1547557463.4684756.xml'
+
+
+------15/01/2019 10:04:51
+Pedido recebido 3465273-1
+
+------15/01/2019 10:04:51
+[Errno 2] No such file or directory: 'pedidos/3465273-1_1547557491.0299766.xml'Traceback (most recent call last):
+  File "C:\Users\ramon\Documents\ramon\UniFardas\webservice.py", line 17, in pedido
+    file_pedido = open('pedidos/'+pedido.Order_Id+'_'+ str(time.time())+'.xml', 'w+')
+FileNotFoundError: [Errno 2] No such file or directory: 'pedidos/3465273-1_1547557491.0299766.xml'
+
+
+------15/01/2019 10:05:22
+Pedido recebido 3465273-1
+
+------15/01/2019 10:05:22
+write() argument must be str, not bytesTraceback (most recent call last):
+  File "C:\Users\ramon\Documents\ramon\UniFardas\webservice.py", line 18, in pedido
+    file_pedido.write(xml)
+TypeError: write() argument must be str, not bytes
+
+
+------15/01/2019 10:05:59
+Pedido recebido 3465273-1
+
+------15/01/2019 10:06:30
+Pedido recebido 3465273-1
+
+------15/01/2019 10:06:30
+Pedido processado 3465273-1

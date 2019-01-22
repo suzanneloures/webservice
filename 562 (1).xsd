@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="cXML">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Header"/>
+				<xs:element ref="Request"/>
+			</xs:sequence>
+			<xs:attribute name="payloadID" use="required" type="xs:integer"/>
+			<xs:attribute name="timestamp" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Header">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="From"/>
+				<xs:element ref="Sender"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="From" type="Credential"/>
+	<xs:element name="Sender" type="Credential"/>
+	<xs:element name="Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ConfirmationRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConfirmationRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ConfirmationHeader"/>
+				<xs:element ref="Comments"/>
+				<xs:element ref="OrderReference"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ConfirmationHeader">
+		<xs:complexType>
+			<xs:attribute name="noticeDate" use="required"/>
+			<xs:attribute name="type">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="accept"/>
+						<xs:enumeration value="reject"/>
+						<xs:enumeration value="detail"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Comments" type="xs:string"/>
+	<xs:element name="OrderReference">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DocumentReference"/>
+			</xs:sequence>
+			<xs:attribute name="orderID" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DocumentReference">
+		<xs:complexType>
+			<xs:attribute name="payloadID" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Credential">
+		<xs:sequence>
+			<xs:element ref="Credential"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Credential">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Identity"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Identity">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="WebbHeader"/>
+				<xs:sequence>
+					<xs:element ref="Name"/>
+					<xs:element ref="InternalID"/>
+				</xs:sequence>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WebbHeader">
+		<xs:complexType>
+			<xs:attribute name="cnpj" use="required" type="xs:integer"/>
+			<xs:attribute name="isvSequence" use="required"/>
+			<xs:attribute name="isvid" use="required" type="xs:integer"/>
+			<xs:attribute name="messageType" use="required" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Name" type="xs:string"/>
+	<xs:element name="InternalID" type="xs:string"/>
+</xs:schema>
