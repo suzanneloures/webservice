@@ -19,8 +19,11 @@ def pedido():
         xml_response = makeXML(pedido)
         req = ResponseRequest(xml_response)
         log.log('Pedido processado '+ pedido.Order_Id)
-        return 'ok'
+        xml_retorno = '<?xml version="1.0"?><Retorno><Status>ok</Status></Retorno>'
+        return xml_retorno
+        
     except Exception as e:
         log.logError(e)
-        return 'error'
+        xml_retorno = '<?xml version="1.0"?><Retorno><Status>error</Status></Retorno>'
+        return xml_retorno
     
