@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import xml.etree.ElementTree as ET
 from pedido import Pedido
 from rules import Rules
